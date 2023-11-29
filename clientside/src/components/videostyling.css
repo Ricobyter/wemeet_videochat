@@ -1,0 +1,15 @@
+@media screen and (max-width: 600px) {
+    .video {
+      width: 450px
+    }
+  }
+@media screen and (max-width: 500px) {
+    .video {
+      width: 400px
+    }
+  }
+@media screen and (max-width: 400px) {
+    .video {
+      width: 300px
+    }
+  }
