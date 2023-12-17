@@ -1,22 +1,22 @@
 import React, { useContext} from 'react'
 import { SocketContext } from '../SocketContext'
-import { Button, Typography } from '@mui/material';
 
 const Notifications = () => {
   const {answerCall, call, callAccepted} = useContext(SocketContext); 
   return (
-   <>
-   {call.isReceivingCall && ! callAccepted && (
-    <div style={{display: 'flex', justifyContent: 'center', marginTop: 10}}>
-      <Typography variant='h5'>{call.name} is calling :</Typography>
-       
-      <Button variant='contained' color='primary' sx={{marginLeft: 2}} onClick={answerCall}>
-        Answer
-      </Button>
-
-    </div>
-   )}
-   </>
+<>
+      {call.isReceivingCall && !callAccepted && (
+        <div className="flex justify-center mt-10 items-center">
+          <h5 className="text-xl">{call.name} is calling : </h5>
+          <button
+            className="bg-blue-500 text-white px-4 py-2 ml-2"
+            onClick={answerCall}
+          >
+            Answer
+          </button>
+        </div>
+      )}
+    </>
   )
 }
 

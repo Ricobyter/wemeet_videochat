@@ -8,45 +8,27 @@ const VideoPlayer = () => {
 
   return (
 
-<div className='flex flex-row justify-center container max-sm:flex-col'>
+    <div className="grid justify-center flex-col grid-col-2">
+
       {/* Our Video */}
-      {
-        stream && (
-          <div className='p-[8px] border-black m-[10px]'>
-            <div className='gap-6 max-md:w-4/5 w-2/5 p-2'>   
-            {/* item xs={12} md={6} gap={6}          */}
-              <video playsInline muted ref={myVideo} autoPlay width='520' className='video'/>
-              {/* <Typography variant='h6' gutterBottom align='left'>{name || 'Name'}</Typography> */}
-              <h2 className='text-2xl font-semibold text-center'>{name || 'Name'}</h2>
-            </div>
-
+      {stream && (
+        <div className="border-2 border-black p-4 m-4">
+          <div className="grid gap-6">
+            <video playsInline muted ref={myVideo} autoPlay width='520' className='video' />
+            <h6 className="text-xl">{name || 'Name'}</h6>
           </div>
-          // sx={{
-          //   padding: '8px',
-          //   border: '2px solid black',
-          //   margin: '10px',
-          // }}
-        )
-      }
-      
+        </div>
+      )}
 
-      {/*Other User's Video */}
-      {
-        callAccepted && !callEnded &&(
-          <div className='p-[8px] border-black m-[10px]'>
-            <div className='gap-6 max-md:w-4/5 w-2/5 p-2'>   
-            {/* item xs={12} md={6} gap={6}          */}
-              <video playsInline muted ref={myVideo} autoPlay width='520' className='video'/>
-              {/* <Typography variant='h6' gutterBottom align='left'>{name || 'Name'}</Typography> */}
-              <h2 className='text-2xl font-semibold text-center'>{name || 'Name'}</h2>
-            </div>
-
+      {/* Other User's Video */}
+      {callAccepted && !callEnded && (
+        <div className="border-2 border-black p-5 m-4">
+          <div className="grid gap-6">
+            <video playsInline ref={userVideo} autoPlay width='520' className='video' />
+            <h6 className="text-xl">{call.name || 'Name'}</h6>
           </div>
-        )
-      }
- 
-
-
+        </div>
+      )}
 
     </div>
   );
