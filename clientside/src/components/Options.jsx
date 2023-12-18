@@ -7,10 +7,10 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
     const [idToCall, setIdToCall] = useState('');
   
     return (
-<div className="mx-auto p-10">
-      <div className="bg-white  p-3 md:p-8">
+<div className="mx-auto p-8 mb-6 ">
+      <div className="bg-white p-3 md:p-8">
         <form className="space-y-2" noValidate autoComplete="off">
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-row max-md:flex-col gap-4 justify-center">
             <div className="md:col-span-6">
               <h6 className="text-lg md:text-xl font-semibold mb-2">Account Info</h6>
               <input
@@ -31,7 +31,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
               <input
                 type="text"
                 className="border border-gray-300 p-2 w-full"
-                placeholder="Make a Call"
+                placeholder="Enter ID"
                 value={idToCall}
                 onChange={(e) => setIdToCall(e.target.value)}
               />

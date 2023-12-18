@@ -8,8 +8,12 @@ export default function App() {
       <Nav/>
       <section>
         <VideoPlayer/>
+         
         <Options>
-        <Notifications />
+          <div className="p-3"></div>
+          <Notifications /> 
+          
+              
         </Options>   
       </section>
     </main>
