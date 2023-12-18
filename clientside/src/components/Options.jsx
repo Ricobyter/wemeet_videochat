@@ -10,7 +10,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 <div className="mx-auto p-8 mb-6 ">
       <div className="bg-white p-3 md:p-8">
         <form className="space-y-2" noValidate autoComplete="off">
-          <div className="flex flex-row max-md:flex-col gap-4 justify-center">
+          <div className="flex flex-row max-sm:flex-col gap-4 justify-center">
             <div className="md:col-span-6">
               <h6 className="text-lg md:text-xl font-semibold mb-2">Account Info</h6>
               <input
@@ -56,6 +56,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
           </div>
         </form>
         {children}
+        
       </div>
     </div>
     )
