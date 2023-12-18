@@ -7,10 +7,10 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
     const [idToCall, setIdToCall] = useState('');
   
     return (
-<div className="container mx-auto p-10">
-      <div className="bg-white shadow-lg p-3 md:p-8">
+<div className="mx-auto p-10">
+      <div className="bg-white  p-3 md:p-8">
         <form className="space-y-2" noValidate autoComplete="off">
-          <div className="grid gap-2 justify-center">
+          <div className="flex gap-4 justify-center">
             <div className="md:col-span-6">
               <h6 className="text-lg md:text-xl font-semibold mb-2">Account Info</h6>
               <input
