@@ -5,7 +5,7 @@ import Peer from 'simple-peer';
 const SocketContext = createContext();
 
 // const socket = io('http://localhost:5000');
-const socket = io('https://vercel.com/dhruv-s-projects/wemeet-videochat-backend/E63uTjKp7Zdz1PoRVaNjid3uMbbc');
+const socket = io('https://wemeet-videochat-server.vercel.app/');
 
 const ContextProvider = ({ children }) => {
   const [callAccepted, setCallAccepted] = useState(false);
